@@ -14,11 +14,16 @@ deployment:
     # 2. storage ve cache dizin izinlerini düzelt
     - chmod -R 775 core/storage core/bootstrap/cache
 
-    # 3. Laravel config/route/view cache temizle ve yeniden oluştur
-    - /usr/local/bin/php core/artisan config:clear --quiet 2>/dev/null || true
-    - /usr/local/bin/php core/artisan config:cache --quiet
-    - /usr/local/bin/php core/artisan route:cache --quiet
-    - /usr/local/bin/php core/artisan view:cache --quiet
+    # 3. TÜM önbellekleri temizle (stale cache sorunlarını önler)
+    - /usr/local/bin/php core/artisan optimize:clear 2>&1 || true
 
-    # 4. Storage link (storage/app/public → public/storage)
-    - /usr/local/bin/php core/artisan storage:link --force --quiet 2>/dev/null || true
+    # 4. Paket keşfi — packages.php ve services.php oluştur
+    - /usr/local/bin/php core/artisan package:discover --ansi 2>&1 || true
+
+    # 5. Laravel config/route/view cache oluştur
+    - /usr/local/bin/php core/artisan config:cache 2>&1
+    - /usr/local/bin/php core/artisan route:cache 2>&1
+    - /usr/local/bin/php core/artisan view:cache 2>&1
+
+    # 6. Storage link (storage/app/public → public/storage)
+    - /usr/local/bin/php core/artisan storage:link --force 2>&1 || true
