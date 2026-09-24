@@ -6,6 +6,10 @@ core/.env.backup
 core/.env.local
 core/.env.*.local
 
+# Admin paneli ve Frond sistemi — sunucuda bağımsız çalışır, git ile yönetilmez
+admin/
+frond/
+
 # NOT: core/vendor/ KASITLI OLARAK dahil edildi.
 # cPanel'de terminal erişimi olmadığından composer çalıştırılamaz.
 
