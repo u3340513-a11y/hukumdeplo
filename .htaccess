@@ -1,22 +1,24 @@
 # ─────────────────────────────────────────────
-# Güvenlik: Dizin Listelemeyi Kapat
+# Dizin Listelemeyi Kapat
 # ─────────────────────────────────────────────
 Options -Indexes
 
 # ─────────────────────────────────────────────
-# Güvenlik: Hassas Dosya ve Dizinlere Erişimi Engelle
+# Hassas Dosya Erişimini Engelle
+# Apache 2.2 ve 2.4 uyumlu (IfModule ile güvenli)
 # ─────────────────────────────────────────────
-<FilesMatch "^\.">
-    Require all denied
-</FilesMatch>
-
-<FilesMatch "(\.env|\.env\.example|composer\.(json|lock)|artisan|phpunit\.xml|package\.json|package-lock\.json|webpack\.mix\.js|vite\.config\.js)$">
-    Require all denied
-</FilesMatch>
-
-# core/ dizinine doğrudan HTTP erişimini engelle
-<IfModule mod_rewrite.c>
-    RewriteRule ^core(/|$) - [F,L]
+<IfModule mod_authz_core.c>
+    # Apache 2.4+
+    <FilesMatch "(\.env|\.env\.example|composer\.(json|lock)|artisan|phpunit\.xml)$">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+    # Apache 2.2 fallback
+    <FilesMatch "(\.env|\.env\.example|composer\.(json|lock)|artisan|phpunit\.xml)$">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
 </IfModule>
 
 # ─────────────────────────────────────────────
@@ -28,6 +30,9 @@ Options -Indexes
     </IfModule>
 
     RewriteEngine On
+
+    # core/ dizinine doğrudan HTTP erişimini engelle
+    RewriteRule ^core(/|$) - [F,L]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
@@ -46,11 +51,10 @@ Options -Indexes
 </IfModule>
 
 # ─────────────────────────────────────────────
-# Güvenlik: HTTP Başlıkları
+# Güvenlik HTTP Başlıkları (mod_headers varsa)
 # ─────────────────────────────────────────────
 <IfModule mod_headers.c>
     Header always set X-Content-Type-Options "nosniff"
     Header always set X-Frame-Options "SAMEORIGIN"
-    Header always set X-XSS-Protection "1; mode=block"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
