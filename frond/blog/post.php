@@ -90,7 +90,7 @@ require_once __DIR__ . '/../includes/header.php';
 <div class="post-hero" id="post-hero">
   <div class="post-bg">
     <?php if (!empty($post['featured_image'])): ?>
-      <img src="/uploads/<?= he($post['featured_image']) ?>"
+      <img src="/admin/uploads/<?= he($post['featured_image']) ?>"
            alt="<?= he($post['title']) ?>">
     <?php else: ?>
       <div style="width:100%;height:100%;background:var(--grad-hero)"></div>
@@ -174,7 +174,7 @@ require_once __DIR__ . '/../includes/header.php';
               <a href="post.php?slug=<?= urlencode($r['slug'] ?: $r['id']) ?>">
                 <div class="bl-thumb">
                   <?php if (!empty($r['featured_image'])): ?>
-                    <img src="/uploads/<?= he($r['featured_image']) ?>" alt="<?= he($r['title']) ?>" loading="lazy">
+                    <img src="/admin/uploads/<?= he($r['featured_image']) ?>" alt="<?= he($r['title']) ?>" loading="lazy">
                   <?php else: ?>
                     <div class="bl-ph">📝</div>
                   <?php endif; ?>
@@ -214,7 +214,7 @@ require_once __DIR__ . '/../includes/header.php';
           <a href="post.php?slug=<?= urlencode($rp['slug'] ?: $rp['id']) ?>" class="recent-post">
             <div class="rp-img">
               <?php if (!empty($rp['featured_image'])): ?>
-                <img src="/uploads/<?= he($rp['featured_image']) ?>" alt="<?= he($rp['title']) ?>" loading="lazy">
+                <img src="/admin/uploads/<?= he($rp['featured_image']) ?>" alt="<?= he($rp['title']) ?>" loading="lazy">
               <?php else: ?>
                 <div style="width:100%;height:100%;background:#12122a;display:flex;align-items:center;justify-content:center;font-size:20px">📝</div>
               <?php endif; ?>

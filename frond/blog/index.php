@@ -119,7 +119,7 @@ require_once __DIR__ . '/../includes/header.php';
           <a href="post.php?slug=<?= urlencode($post['slug'] ?: $post['id']) ?>">
             <div class="bl-thumb">
               <?php if (!empty($post['featured_image'])): ?>
-                <img src="/uploads/<?= he($post['featured_image']) ?>"
+                <img src="/admin/uploads/<?= he($post['featured_image']) ?>"
                      alt="<?= he($post['title']) ?>"
                      loading="lazy">
               <?php else: ?>

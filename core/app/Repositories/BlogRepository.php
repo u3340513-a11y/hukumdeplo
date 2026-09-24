@@ -189,7 +189,7 @@ class BlogRepository
             // View uyumu için normalize alanlar
             // blog-cover.blade bileşeni 'image' key'i bekler
             'image'          => $row['featured_image']
-                ? '/uploads/' . $row['featured_image']
+                ? '/admin/uploads/' . $row['featured_image']
                 : null,
 
             // show.blade ve index.blade date/read key'leri bekler
