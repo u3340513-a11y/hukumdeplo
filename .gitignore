@@ -1,15 +1,13 @@
 # ─────────────────────────────────────────────
-# Ortam ve Gizli Dosyalar
+# Ortam ve Gizli Dosyalar (repoya girmesin)
 # ─────────────────────────────────────────────
 core/.env
 core/.env.backup
 core/.env.local
 core/.env.*.local
 
-# ─────────────────────────────────────────────
-# Bağımlılıklar (Sunucuda composer install ile kurulacak)
-# ─────────────────────────────────────────────
-core/vendor/
+# NOT: core/vendor/ KASITLI OLARAK dahil edildi.
+# cPanel'de terminal erişimi olmadığından composer çalıştırılamaz.
 
 # ─────────────────────────────────────────────
 # Laravel Önbellek ve Geçici Dosyalar
@@ -20,7 +18,7 @@ core/storage/framework/sessions/*
 core/storage/framework/views/*
 core/storage/logs/*
 
-# storage alt klasörleri hariç .gitkeep dosyaları
+# storage alt klasörleri .gitkeep dahil
 !core/storage/framework/cache/data/.gitkeep
 !core/storage/framework/sessions/.gitkeep
 !core/storage/framework/views/.gitkeep
@@ -28,14 +26,11 @@ core/storage/logs/*
 !core/bootstrap/cache/.gitkeep
 
 # ─────────────────────────────────────────────
-# Derleme Çıktıları (CI/CD ile üretilecek)
+# Derleme Çıktıları (build/ cPanel'de önceden derlenmiş olarak tutuluyor)
 # ─────────────────────────────────────────────
 core/node_modules/
 core/public/hot
 core/public/storage
-
-# build dizini cPanel'e dahil edilecek (önceden derlenmiş)
-# build/
 
 # ─────────────────────────────────────────────
 # macOS / IDE
