@@ -35,7 +35,7 @@ return [
             [
                 'kicker'      => 'Dijital Pazarlama & SEO',
                 'title'       => 'Dijital Pazarlama & <span class="text-gradient-light">SEO Hizmetleri</span>',
-                'description' => 'Google'da üst sıralara çıkın. SEO, Google Ads ve sosyal medya yönetimiyle markanızı dijitalde zirveye taşıyoruz.',
+                'description' => 'Google\'da üst sıralara çıkın. SEO, Google Ads ve sosyal medya yönetimiyle markanızı dijitalde zirveye taşıyoruz.',
                 'image'       => 'images/slider/slide-hukumdar-3.png',
                 'cta_primary'   => ['label' => 'SEO Hizmetimiz', 'href' => '/hizmetler/seo'],
                 'cta_secondary' => ['label' => 'Teklif Alın', 'href' => '/iletisim'],
