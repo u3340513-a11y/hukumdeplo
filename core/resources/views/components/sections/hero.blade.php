@@ -128,7 +128,7 @@
     </div>
 
     <div class="relative z-10 container-page pb-12 sm:pb-16">
-        <div class="grid grid-cols-3 items-center gap-2.5 sm:gap-8 border-t border-white/20 pt-4 sm:pt-6">
+        <div class="grid grid-cols-2 sm:grid-cols-4 items-center gap-2.5 sm:gap-8 border-t border-white/20 pt-4 sm:pt-6">
             @foreach ($slides as $index => $slide)
                 <button
                     type="button"
