@@ -7,6 +7,8 @@
 deployment:
   tasks:
     # 1. .env yoksa .env.example'dan oluştur (ilk deploy'da otomatik çalışır)
+    #    NOT: İlk deploy'dan sonra cPanel File Manager'dan core/.env içindeki
+    #         DB_PASSWORD değerini gerçek şifreyle doldurun.
     - "[ -f core/.env ] || cp core/.env.example core/.env"
 
     # 2. storage ve cache dizin izinlerini düzelt

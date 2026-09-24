@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\BlogRepository;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Arr;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -72,42 +73,51 @@ class PageController extends Controller
 
     /**
      * Blog — liste.
+     * Admin DB'sinden yayınlanmış yazıları çeker, sayfalama ve kategori filtresi uygular.
      */
     public function blog(): View
     {
-        return view('pages.blog.index');
+        $repo = new BlogRepository();
+
+        $page       = max(1, (int) request()->query('page', 1));
+        $catName    = trim((string) request()->query('cat', ''));
+        $categoryId = $catName ? $repo->categoryIdByName($catName) : null;
+
+        $result     = $repo->paginate($page, $categoryId);
+        $categories = $repo->categories();
+
+        $totalPages = $result['total'] > 0
+            ? (int) ceil($result['total'] / $result['perPage'])
+            : 1;
+
+        return view('pages.blog.index', [
+            'posts'      => $result['posts'],
+            'total'      => $result['total'],
+            'page'       => $page,
+            'totalPages' => $totalPages,
+            'categories' => $categories,
+            'catName'    => $catName,
+        ]);
     }
 
     /**
      * Blog detay.
+     * Slug veya ID ile admin DB'sinden yazıyı çeker.
      */
     public function blogShow(string $slug): View
     {
-        $items = config('content.blog.items');
-        $post = Arr::first($items, fn ($item) => $item['slug'] === $slug);
+        $repo = new BlogRepository();
+        $post = $repo->findBySlug($slug);
 
         if (! $post) {
             throw new NotFoundHttpException('Yazı bulunamadı.');
         }
 
-        $related = array_values(array_filter(
-            $items,
-            fn ($item) => $item['slug'] !== $slug && ($item['category'] ?? '') === ($post['category'] ?? '')
-        ));
-
-        if (count($related) < 2) {
-            $related = array_merge(
-                $related,
-                array_values(array_filter(
-                    $items,
-                    fn ($item) => $item['slug'] !== $slug && ($item['category'] ?? '') !== ($post['category'] ?? '')
-                ))
-            );
-        }
+        $related = $repo->related($post['id'], $post['category_id'] ?? null);
 
         return view('pages.blog.show', [
-            'post' => $post,
-            'related' => array_slice($related, 0, 2),
+            'post'    => $post,
+            'related' => $related,
         ]);
     }
 
