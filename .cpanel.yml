@@ -1,0 +1,35 @@
+---
+# ─────────────────────────────────────────────────────────────────────────────
+# cPanel Git Version Control — Deploy Sonrası Görevler
+# Döküman: https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-deployment/
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Bu dosya cPanel tarafından her "git pull" / "git push" işlemi sonrası
+# otomatik çalıştırılır.
+#
+# KURULUM NOTU:
+#   İlk deploy öncesi cPanel SSH terminalinden bir kez şunu çalıştır:
+#     cd <deploy_dizini>/core && composer install --no-dev --optimize-autoloader
+#     php artisan key:generate
+#     php artisan config:cache
+#     php artisan route:cache
+#     php artisan view:cache
+#
+# ─────────────────────────────────────────────────────────────────────────────
+
+deployment:
+  tasks:
+    # 1. Composer bağımlılıklarını güncelle (prod, optimize)
+    - export COMPOSER_HOME="${HOME}/.composer" && cd core && /usr/local/bin/php /usr/local/bin/composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist 2>&1
+
+    # 2. Laravel config/route/view cache temizle ve yeniden oluştur
+    - cd core && /usr/local/bin/php artisan config:clear
+    - cd core && /usr/local/bin/php artisan config:cache
+    - cd core && /usr/local/bin/php artisan route:cache
+    - cd core && /usr/local/bin/php artisan view:cache
+
+    # 3. Storage sembolik bağını oluştur (yoksa)
+    - cd core && /usr/local/bin/php artisan storage:link --force 2>&1 || true
+
+    # 4. Storage ve Cache dizin izinlerini düzelt
+    - chmod -R 775 core/storage core/bootstrap/cache

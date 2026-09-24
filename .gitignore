@@ -1,0 +1,52 @@
+# ─────────────────────────────────────────────
+# Ortam ve Gizli Dosyalar
+# ─────────────────────────────────────────────
+core/.env
+core/.env.backup
+core/.env.local
+core/.env.*.local
+
+# ─────────────────────────────────────────────
+# Bağımlılıklar (Sunucuda composer install ile kurulacak)
+# ─────────────────────────────────────────────
+core/vendor/
+
+# ─────────────────────────────────────────────
+# Laravel Önbellek ve Geçici Dosyalar
+# ─────────────────────────────────────────────
+core/bootstrap/cache/*.php
+core/storage/framework/cache/data/*
+core/storage/framework/sessions/*
+core/storage/framework/views/*
+core/storage/logs/*
+
+# storage alt klasörleri hariç .gitkeep dosyaları
+!core/storage/framework/cache/data/.gitkeep
+!core/storage/framework/sessions/.gitkeep
+!core/storage/framework/views/.gitkeep
+!core/storage/logs/.gitkeep
+!core/bootstrap/cache/.gitkeep
+
+# ─────────────────────────────────────────────
+# Derleme Çıktıları (CI/CD ile üretilecek)
+# ─────────────────────────────────────────────
+core/node_modules/
+core/public/hot
+core/public/storage
+
+# build dizini cPanel'e dahil edilecek (önceden derlenmiş)
+# build/
+
+# ─────────────────────────────────────────────
+# macOS / IDE
+# ─────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo

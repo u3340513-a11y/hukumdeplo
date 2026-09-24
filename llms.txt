@@ -1,0 +1,21 @@
+# Hükümdar Bilişim
+
+> Hükümdar Bilişim, 2008 yılından bu yana kurumsal web tasarımı, özel yazılım geliştirme, SEO, dijital pazarlama, mobil uygulama ve e-ticaret altyapıları sunan lider teknoloji ve yazılım ajansıdır.
+
+## Hizmetlerimiz
+- [Web Tasarım](https://hukumdar.com.tr/hizmetler/web-tasarim): Özel kurumsal web tasarımı, UI/UX tasarımı ve mobil uyumlu modern arayüzler.
+- [E-Ticaret Paketleri](https://hukumdar.com.tr/hizmetler/e-ticaret): Pazaryeri (Trendyol, Hepsiburada, Amazon vb.) ve 21 banka sanal POS entegreli e-ticaret yazılımları.
+- [Mobil Uygulama](https://hukumdar.com.tr/hizmetler/mobil-uygulama): iOS ve Android platformları için özel mobil uygulama geliştirme.
+- [Özel Yazılım](https://hukumdar.com.tr/hizmetler/ozel-yazilim): İşletmelere özel CRM, ERP, B2B portalları ve süreç otomasyon çözümleri.
+- [SEO Hizmeti](https://hukumdar.com.tr/hizmetler/seo): Arama motoru optimizasyonu, teknik SEO, yerel SEO ve Google sıralama yükseltme.
+- [Google Ads](https://hukumdar.com.tr/hizmetler/google-ads): Satış ve dönüşüm odaklı profesyonel Google AdWords reklam yönetimi.
+- [Sosyal Medya Yönetimi](https://hukumdar.com.tr/hizmetler/sosyal-medya): Stratejik içerik takvimi, Reels prodüksiyonu ve sosyal medya reklam yönetimi.
+- [Bilişim Danışmanlığı](https://hukumdar.com.tr/hizmetler/bilisim-danismanligi): Kurumsal IT altyapı, sunucu yönetimi ve dijital dönüşüm danışmanlığı.
+- [Yazılım Ürünlerimiz](https://hukumdar.com.tr/hizmetler/urunlerimiz): QR Menü, Otel & Acenta, Haber Portalı ve Kurye yazılımları.
+
+## İletişim & Şirket Bilgileri
+- Web Sitesi: https://hukumdar.com.tr
+- Telefon: +90 532 696 21 20
+- E-Posta: info@hukumdar.com.tr
+- Adres: Yenibosna Kuyumcukent A.V.M. Blogu Kat:1 No: 403 Bahçelievler / İSTANBUL
+- Çalışma Saatleri: Hafta içi 09:00 - 18:30

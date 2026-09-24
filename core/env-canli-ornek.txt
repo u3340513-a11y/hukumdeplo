@@ -1,0 +1,28 @@
+# Bu dosyayı sunucuda .env olarak yeniden adlandırın ve mail şifresini girin.
+
+APP_NAME="Hükümdar Bilişim"
+APP_ENV=production
+APP_KEY="base64:/WPiomcpcuaQ+LYMxIIjT5Y+zqI/OiDl6aOJuXG3Cgo="
+APP_DEBUG=false
+APP_URL=https://hukumdar.com.tr
+APP_LOCALE=tr
+APP_TIMEZONE=Europe/Istanbul
+
+DB_CONNECTION=sqlite
+
+SESSION_DRIVER=file
+CACHE_STORE=file
+QUEUE_CONNECTION=sync
+
+LOG_CHANNEL=stack
+LOG_LEVEL=error
+
+MAIL_MAILER=smtp
+MAIL_SCHEME=smtps
+MAIL_HOST=mail.hukumdar.com.tr
+MAIL_PORT=465
+MAIL_USERNAME=info@hukumdar.com.tr
+MAIL_PASSWORD="BURAYA-MAIL-SIFRENIZ"
+MAIL_FROM_ADDRESS="info@hukumdar.com.tr"
+MAIL_FROM_NAME="Hükümdar Bilişim"
+MAIL_TO=info@hukumdar.com.tr
