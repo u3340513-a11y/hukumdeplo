@@ -1,0 +1,13 @@
+# Yüklenen görseller — versiyon kontrolüne alınmaz
+uploads/*
+!uploads/.htaccess
+
+# OS dosyaları
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
