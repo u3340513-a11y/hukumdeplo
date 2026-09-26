@@ -805,7 +805,7 @@
                         <div class="text-xs text-ink-500">Müşteri danışmanımızla WhatsApp üzerinden hemen görüşün.</div>
                     </div>
                 </div>
-                <a href="{{ $contact['whatsapp'] }}" target="_blank" rel="noopener" class="btn btn-primary mt-4 sm:mt-0 text-xs font-semibold px-5 py-2.5 shrink-0">
+                <a href="{{ $contact['whatsapp'] }}" target="_blank" rel="noopener" onclick="return gtag_report_conversion(this.href, 'AW-18142453012/dMz2CKO6pOMcEJS6_8pD');" class="btn btn-primary mt-4 sm:mt-0 text-xs font-semibold px-5 py-2.5 shrink-0">
                     WhatsApp ile Danışın
                 </a>
             </div>

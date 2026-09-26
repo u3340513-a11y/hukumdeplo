@@ -126,7 +126,7 @@
                 <div class="hk-f-office">
                     <div class="hk-f-off-l">İstanbul Ofisi</div>
                     <div class="hk-f-off-a">{!! nl2br(e($contact['address'])) !!}</div>
-                    <a class="hk-f-off-c" href="{{ $contact['phone_href'] }}">
+                    <a class="hk-f-off-c" href="{{ $contact['phone_href'] }}" onclick="return gtag_report_conversion(this.href, 'AW-18142453012/KUz5CKnUt-McEJS6_8pD');">
                         <x-icon name="phone" class="h-3.5 w-3.5" />
                         {{ $contact['phone'] }}
                     </a>
@@ -173,9 +173,9 @@
                 {{-- İletişim --}}
                 <div class="hk-f-menu">
                     <p class="hk-f-menu-t">İletişim</p>
-                    <a href="{{ $contact['phone_href'] }}">{{ $contact['phone'] }}</a>
+                    <a href="{{ $contact['phone_href'] }}" onclick="return gtag_report_conversion(this.href, 'AW-18142453012/KUz5CKnUt-McEJS6_8pD');">{{ $contact['phone'] }}</a>
                     <a href="mailto:{{ $contact['email'] }}">{{ $contact['email'] }}</a>
-                    <a href="{{ $contact['whatsapp'] }}" target="_blank" rel="noopener">WhatsApp İletişim</a>
+                    <a href="{{ $contact['whatsapp'] }}" target="_blank" rel="noopener" onclick="return gtag_report_conversion(this.href, 'AW-18142453012/dMz2CKO6pOMcEJS6_8pD');">WhatsApp İletişim</a>
                     <span style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.5;margin-top:4px">{{ $contact['address'] }}</span>
                     <a href="/iletisim" style="display:inline-flex;align-items:center;justify-content:center;margin-top:10px;padding:10px 20px;background:var(--c-brand,#b58948);color:#fff;font-weight:700;font-size:13px;border-radius:8px;white-space:nowrap">Ücretsiz Teklif Alın</a>
                 </div>

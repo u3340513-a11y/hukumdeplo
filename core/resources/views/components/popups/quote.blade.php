@@ -100,6 +100,7 @@
                                     target="_blank"
                                     rel="noopener"
                                     class="quote-popup-wa"
+                                    onclick="return gtag_report_conversion(this.href, 'AW-18142453012/dMz2CKO6pOMcEJS6_8pD');"
                                     @click="close()"
                                 >
                                     <x-icon name="whatsapp" class="h-3.5 w-3.5" />

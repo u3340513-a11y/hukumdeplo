@@ -34,6 +34,44 @@
 <!DOCTYPE html>
 <html lang="tr" class="scroll-smooth antialiased">
 <head>
+    {{-- Google tag (gtag.js) --}}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11016022451"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        // Önceki kurulumdaki Google tag
+        gtag('config', 'AW-11016022451');
+
+        // Google Ads dönüşümlerinin bulunduğu hesap
+        gtag('config', 'AW-18142453012');
+    </script>
+
+    {{-- Google Ads Dönüşüm Raporlama --}}
+    <script>
+        function gtag_report_conversion(url, sendTo) {
+            var callback = function () {
+                if (typeof url !== 'undefined' && url) {
+                    window.location.href = url;
+                }
+            };
+
+            gtag('event', 'conversion', {
+                'send_to': sendTo,
+                'value': 1.0,
+                'currency': 'TRY',
+                'event_callback': callback
+            });
+
+            return false;
+        }
+    </script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#2563EB">

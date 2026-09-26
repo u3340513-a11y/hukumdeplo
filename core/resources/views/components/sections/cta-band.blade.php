@@ -26,13 +26,14 @@
                         Ücretsiz Teklif Alın <x-icon name="arrow-right" class="h-4 w-4" />
                     </a>
                     <a href="{{ $contact['whatsapp'] }}" target="_blank" rel="noopener"
+                       onclick="return gtag_report_conversion(this.href, 'AW-18142453012/dMz2CKO6pOMcEJS6_8pD');"
                        class="btn btn-light bg-white/10 text-white backdrop-blur hover:bg-white/15">
                         <x-icon name="whatsapp" class="h-5 w-5 text-emerald-400" /> WhatsApp ile yazın
                     </a>
                 </div>
 
                 <div class="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-white/60">
-                    <a href="{{ $contact['phone_href'] }}" class="inline-flex items-center gap-2 transition hover:text-white">
+                    <a href="{{ $contact['phone_href'] }}" onclick="return gtag_report_conversion(this.href, 'AW-18142453012/KUz5CKnUt-McEJS6_8pD');" class="inline-flex items-center gap-2 transition hover:text-white">
                         <x-icon name="phone" class="h-4 w-4 text-accent" /> {{ $contact['phone'] }}
                     </a>
                     <a href="mailto:{{ $contact['email'] }}" class="inline-flex items-center gap-2 transition hover:text-white">

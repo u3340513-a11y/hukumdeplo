@@ -109,6 +109,7 @@
                     <x-icon name="arrow-right" class="h-4 w-4" />
                 </a>
                 <a href="{{ $contact['whatsapp'] }}" target="_blank" rel="noopener"
+                   onclick="return gtag_report_conversion(this.href, 'AW-18142453012/dMz2CKO6pOMcEJS6_8pD');"
                    class="btn btn-ghost w-full">
                     <x-icon name="whatsapp" class="h-5 w-5 text-emerald-500" />
                     WhatsApp ile yazın
@@ -116,7 +117,7 @@
             </div>
 
             <div class="flex items-center justify-between">
-                <a href="{{ $contact['phone_href'] }}" class="inline-flex items-center gap-2 text-sm font-medium text-ink-600 transition hover:text-brand-700">
+                <a href="{{ $contact['phone_href'] }}" onclick="return gtag_report_conversion(this.href, 'AW-18142453012/KUz5CKnUt-McEJS6_8pD');" class="inline-flex items-center gap-2 text-sm font-medium text-ink-600 transition hover:text-brand-700">
                     <x-icon name="phone" class="h-4 w-4" /> {{ $contact['phone'] }}
                 </a>
                 <div class="flex items-center gap-1.5">

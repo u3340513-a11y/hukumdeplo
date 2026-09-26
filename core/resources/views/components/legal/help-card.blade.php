@@ -15,7 +15,7 @@
             <x-icon name="mail" class="h-4 w-4 shrink-0" />
             {{ $contact['email'] }}
         </a>
-        <a href="{{ $contact['phone_href'] }}" class="flex items-center gap-2 text-sm font-semibold text-brand-700 transition hover:text-brand-800">
+        <a href="{{ $contact['phone_href'] }}" onclick="return gtag_report_conversion(this.href, 'AW-18142453012/KUz5CKnUt-McEJS6_8pD');" class="flex items-center gap-2 text-sm font-semibold text-brand-700 transition hover:text-brand-800">
             <x-icon name="phone" class="h-4 w-4 shrink-0" />
             {{ $contact['phone'] }}
         </a>

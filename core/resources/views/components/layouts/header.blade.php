@@ -28,7 +28,7 @@
                 Ekibimiz şu an müsait · ortalama yanıt 2 saat
             </span>
             <div class="flex items-center gap-5">
-                <a href="{{ $contact['phone_href'] }}" class="inline-flex items-center gap-2 text-white/80 transition hover:text-white">
+                <a href="{{ $contact['phone_href'] }}" onclick="return gtag_report_conversion(this.href, 'AW-18142453012/KUz5CKnUt-McEJS6_8pD');" class="inline-flex items-center gap-2 text-white/80 transition hover:text-white">
                     <x-icon name="phone" class="h-4 w-4" /> {{ $contact['phone'] }}
                 </a>
                 <span class="h-3.5 w-px bg-white/15"></span>

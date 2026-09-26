@@ -7,7 +7,7 @@
         <x-section-heading :eyebrow="$pr['eyebrow']" :title="$pr['title']" :description="$pr['description']" />
 
         <div class="mx-auto mt-6 flex max-w-2xl justify-center px-4">
-            <a href="https://wa.me/905326962120?text={{ urlencode('Merhaba, web tasarım ve e-ticaret paketleriniz hakkında bilgi almak istiyorum.') }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-brand-200/80 bg-brand-50/90 px-4 py-2 text-center text-xs sm:text-sm font-medium text-brand-800 transition hover:bg-brand-100 hover:border-brand-300">
+            <a href="https://wa.me/905326962120?text={{ urlencode('Merhaba, web tasarım ve e-ticaret paketleriniz hakkında bilgi almak istiyorum.') }}" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion(this.href, 'AW-18142453012/dMz2CKO6pOMcEJS6_8pD');" class="inline-flex items-center gap-2 rounded-full border border-brand-200/80 bg-brand-50/90 px-4 py-2 text-center text-xs sm:text-sm font-medium text-brand-800 transition hover:bg-brand-100 hover:border-brand-300">
                 <x-icon name="bolt" class="h-4 w-4 shrink-0 text-brand-600" />
                 <span>{{ $pr['note'] }}</span>
             </a>

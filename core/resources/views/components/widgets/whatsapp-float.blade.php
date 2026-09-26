@@ -75,6 +75,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-500 px-4 py-2.5 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(16,185,129,0.65)] transition hover:bg-emerald-600 active:scale-[0.98]"
+                    onclick="return gtag_report_conversion(this.href, 'AW-18142453012/dMz2CKO6pOMcEJS6_8pD');"
                 >
                     <x-icon name="whatsapp" class="h-4 w-4" />
                     {{ $widget['cta'] }}

@@ -211,11 +211,11 @@
                 Bu hizmet için teklif alın <x-icon name="arrow-right" class="h-4 w-4" />
             </a>
             @if (!empty($service['hero_bg']))
-                <a href="{{ $contact['whatsapp'] }}" target="_blank" rel="noopener" class="btn border border-white/30 bg-white/10 text-white shadow-sm backdrop-blur-sm transition duration-300 hover:bg-white/20 hover:border-white/50">
+                <a href="{{ $contact['whatsapp'] }}" target="_blank" rel="noopener" onclick="return gtag_report_conversion(this.href, 'AW-18142453012/dMz2CKO6pOMcEJS6_8pD');" class="btn border border-white/30 bg-white/10 text-white shadow-sm backdrop-blur-sm transition duration-300 hover:bg-white/20 hover:border-white/50">
                     <x-icon name="whatsapp" class="h-5 w-5 text-emerald-400" /> Hızlı soru sorun
                 </a>
             @else
-                <a href="{{ $contact['whatsapp'] }}" target="_blank" rel="noopener" class="btn btn-ghost">
+                <a href="{{ $contact['whatsapp'] }}" target="_blank" rel="noopener" onclick="return gtag_report_conversion(this.href, 'AW-18142453012/dMz2CKO6pOMcEJS6_8pD');" class="btn btn-ghost">
                     <x-icon name="whatsapp" class="h-5 w-5 text-emerald-500" /> Hızlı soru sorun
                 </a>
             @endif
@@ -329,7 +329,7 @@
                             <a href="/iletisim?hizmet={{ urlencode($service['title']) }}" class="btn btn-primary mt-6 w-full">
                                 Ücretsiz Teklif Alın <x-icon name="arrow-right" class="h-4 w-4" />
                             </a>
-                            <a href="{{ $contact['phone_href'] }}" class="mt-3 flex items-center justify-center gap-2 text-sm text-white/70 transition hover:text-white">
+                            <a href="{{ $contact['phone_href'] }}" onclick="return gtag_report_conversion(this.href, 'AW-18142453012/KUz5CKnUt-McEJS6_8pD');" class="mt-3 flex items-center justify-center gap-2 text-sm text-white/70 transition hover:text-white">
                                 <x-icon name="phone" class="h-4 w-4" /> {{ $contact['phone'] }}
                             </a>
                         </div>

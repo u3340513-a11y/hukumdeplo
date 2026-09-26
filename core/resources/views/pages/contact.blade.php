@@ -28,7 +28,7 @@
                 <div class="space-y-5">
                     {{-- Bilgi kartları --}}
                     <div class="space-y-3">
-                        <a href="{{ $contact['phone_href'] }}" class="group flex items-center gap-4 rounded-2xl border border-ink-200 bg-white p-5 transition hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-card">
+                        <a href="{{ $contact['phone_href'] }}" onclick="return gtag_report_conversion(this.href, 'AW-18142453012/KUz5CKnUt-McEJS6_8pD');" class="group flex items-center gap-4 rounded-2xl border border-ink-200 bg-white p-5 transition hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-card">
                             <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600 ring-1 ring-brand-100 transition group-hover:bg-brand-600 group-hover:text-white">
                                 <x-icon name="phone" class="h-5 w-5" />
                             </span>
@@ -46,7 +46,7 @@
                                 <span class="block font-semibold text-ink-900">{{ $contact['email'] }}</span>
                             </span>
                         </a>
-                        <a href="{{ $contact['whatsapp'] }}" target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-2xl border border-ink-200 bg-white p-5 transition hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-card">
+                        <a href="{{ $contact['whatsapp'] }}" target="_blank" rel="noopener" onclick="return gtag_report_conversion(this.href, 'AW-18142453012/dMz2CKO6pOMcEJS6_8pD');" class="group flex items-center gap-4 rounded-2xl border border-ink-200 bg-white p-5 transition hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-card">
                             <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-emerald-50 text-emerald-600 ring-1 ring-emerald-100 transition group-hover:bg-emerald-500 group-hover:text-white">
                                 <x-icon name="whatsapp" class="h-5 w-5" />
                             </span>
