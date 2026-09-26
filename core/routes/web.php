@@ -8,7 +8,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PageController::class, 'home'])->name('home');
 
 Route::get('/hizmetler', [PageController::class, 'services'])->name('services');
+Route::get('/hazir-yazilimlar', [PageController::class, 'readySoftware'])->name('ready-software');
+Route::get('/hizmetler/hazir-yazilimlar', fn () => redirect()->route('ready-software', [], 301));
+Route::get('/hizmetler/hazir-yazilimlarimiz', fn () => redirect()->route('ready-software', [], 301));
 Route::get('/hizmetler/{slug}', [PageController::class, 'serviceShow'])->name('services.show');
+
+Route::get('/avukat-web-tasarimi', fn () => redirect()->route('services.show', ['slug' => 'avukat-web-tasarimi'], 301));
+Route::get('/doktor-web-tasarimi', fn () => redirect()->route('services.show', ['slug' => 'doktor-web-tasarimi'], 301));
+Route::get('/hazir-cicekci-sitesi', fn () => redirect()->route('services.show', ['slug' => 'hazir-cicekci-sitesi'], 301));
+Route::get('/cicekci-sitesi', fn () => redirect()->route('services.show', ['slug' => 'hazir-cicekci-sitesi'], 301));
+Route::get('/haber-yazilimi', fn () => redirect()->route('services.show', ['slug' => 'haber-yazilimi'], 301));
 
 Route::get('/hakkimizda', [PageController::class, 'about'])->name('about');
 Route::get('/referanslar', [PageController::class, 'references'])->name('references');

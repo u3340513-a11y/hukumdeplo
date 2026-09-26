@@ -30,7 +30,10 @@ class PageController extends Controller
      */
     public function serviceShow(string $slug): View
     {
-        $items = config('content.services.items');
+        $items = array_merge(
+            config('content.services.items', []),
+            config('content.sector_services', [])
+        );
         $service = Arr::first($items, fn ($item) => $item['slug'] === $slug);
 
         if (! $service) {
@@ -45,6 +48,14 @@ class PageController extends Controller
             'service' => $service,
             'related' => array_slice($related, 0, 3),
         ]);
+    }
+
+    /**
+     * Hazır Yazılımlarımız — sektörel anahtar teslim hazır siteler.
+     */
+    public function readySoftware(): View
+    {
+        return view('pages.ready-software.index');
     }
 
     /**
