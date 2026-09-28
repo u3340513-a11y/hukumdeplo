@@ -18,6 +18,8 @@ Route::get('/doktor-web-tasarimi', fn () => redirect()->route('services.show', [
 Route::get('/hazir-cicekci-sitesi', fn () => redirect()->route('services.show', ['slug' => 'hazir-cicekci-sitesi'], 301));
 Route::get('/cicekci-sitesi', fn () => redirect()->route('services.show', ['slug' => 'hazir-cicekci-sitesi'], 301));
 Route::get('/haber-yazilimi', fn () => redirect()->route('services.show', ['slug' => 'haber-yazilimi'], 301));
+Route::get('/mugla-web-tasarim', fn () => redirect()->route('services.show', ['slug' => 'mugla-web-tasarim'], 301));
+Route::get('/e-ticaret-kampanyalari', fn () => redirect()->route('services.show', ['slug' => 'e-ticaret-kampanyalari'], 301));
 
 Route::get('/hakkimizda', [PageController::class, 'about'])->name('about');
 Route::get('/referanslar', [PageController::class, 'references'])->name('references');
