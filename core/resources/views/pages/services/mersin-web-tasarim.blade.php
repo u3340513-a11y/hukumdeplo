@@ -102,6 +102,7 @@
     seoTitle="Mersin Web Tasarım — Profesyonel Kurumsal Web Sitesi Hizmetleri"
     description="Mersin, Tarsus, Silifke ve Erdemli'deki işletmeniz için SEO uyumlu, mobil öncelikli ve yüksek hızlı kurumsal web tasarım çözümleri. Yerel SEO ile Google'da üst sıralara çıkın."
     keywords="mersin web tasarım, mersin web sitesi, tarsus web tasarım, silifke web sitesi, erdemli web tasarım, mersin kurumsal web sitesi, mersin seo, mersin e-ticaret, hükümdar bilişim mersin"
+    image="/images/mersin-web-tasarim.png"
     :breadcrumbs="[['label' => 'Hizmetlerimiz', 'href' => '/hizmetler'], ['label' => 'Mersin Web Tasarım']]">
 
     {{-- Kayan Marquee ve Mockup Özel CSS --}}
