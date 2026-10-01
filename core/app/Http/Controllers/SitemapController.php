@@ -33,6 +33,14 @@ class SitemapController extends Controller
             );
         }
 
+        foreach (config('content.sector_services', []) as $service) {
+            $urls[] = $this->entry(
+                $base . '/hizmetler/' . $service['slug'],
+                '0.9',
+                'monthly'
+            );
+        }
+
         foreach (config('content.blog.items', []) as $post) {
             $urls[] = $this->entry(
                 $base . '/blog/' . $post['slug'],

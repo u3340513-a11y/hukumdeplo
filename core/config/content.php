@@ -73,7 +73,7 @@ return [
             [
                 'slug' => 'web-tasarim',
                 'icon' => 'layout',
-                'seo_title' => 'Web Tasarım - Hükümdar Bilişim',
+                'seo_title' => 'Kurumsal Web Tasarım & Yazılım Çözümleri',
                 'title' => 'Web Tasarım',
                 'short' => 'Hazır değil, özel tasarım modüllerle kullanıcı dostu kurumsal web siteleri.',
                 'desc' => '16 yıllık tecrübesiyle Hükümdar Bilişim; bilgisayar mühendisleri ve yaratıcı ekibiyle sadece estetik değil, işlevsel ve kullanıcı dostu özel web tasarımları sunar.',
@@ -344,6 +344,24 @@ return [
                 ['title' => 'Sipariş & Kargo Otomasyonu', 'desc' => 'Sipariş durum takibi, otomatik kargo barkodu, iptal/iade yönetimi ve anlık bildirimler.'],
                 ['title' => 'SEO & Dijital Pazarlama', 'desc' => 'Google Analytics, Search Console kurulumu ve arama motorlarına tam uyumlu ölçeklenebilir mimari.'],
                 ['title' => 'WhatsApp & Canlı Destek', 'desc' => 'Anlık sipariş bildirimi, müşteri soru-cevap sistemi ve 7/24 WhatsApp destek hattı.'],
+            ],
+        ],
+        [
+            'slug' => 'mersin-web-tasarim',
+            'icon' => 'layout',
+            'seo_title' => 'Mersin Web Tasarım — Profesyonel Kurumsal Web Sitesi Hizmetleri',
+            'title' => 'Mersin Web Tasarım',
+            'short' => 'Mersin, Tarsus, Silifke ve tüm ilçelerdeki işletmelere yerel SEO odaklı, mobil öncelikli kurumsal web tasarım.',
+            'desc' => 'Mersin\'in sanayi, liman, turizm ve ticaret sektörlerindeki işletmeleri için yerel SEO uyumlu, yüksek hızlı ve özgün web tasarım çözümleri. Google\'da üst sıralara çıkın, dijital varlığınızı güçlendirin.',
+            'features' => ['Yerel SEO & Google Haritalar', 'Mobil öncelikli tasarım', 'Hızlı teslim & 7/24 destek'],
+            'intro' => 'Mersin\'den Tarsus\'a, Silifke\'den Erdemli\'ye kadar tüm ilçelerdeki işletmelere kurumsal, hızlı ve SEO uyumlu web tasarım çözümleri sunuyoruz. Sanayi, liman lojistiği, turizm ve perakende sektörlerine özel modüller ve yerel Google optimizasyonu standarttır.',
+            'deliverables' => [
+                ['title' => 'Yerel SEO & Google Haritalar Entegrasyonu', 'desc' => '"Mersin web tasarım", "Tarsus e-ticaret sitesi" gibi bölgesel aramalarda üst sıralarda yer almanızı sağlayan yerel SEO altyapısı.'],
+                ['title' => 'Sektöre Özel Kurumsal Tasarım', 'desc' => 'Sanayi, ihracat, lojistik, turizm ve perakende gibi Mersin\'e özgü sektörler için özelleştirilmiş güçlü arayüz çözümleri.'],
+                ['title' => 'Hızlı Açılım & Core Web Vitals', 'desc' => 'Google PageSpeed standartlarına tam uyumlu; WebP görseller, CDN ve önbellek optimizasyonuyla 1 saniyenin altında açılan sayfalar.'],
+                ['title' => '%100 Mobil Uyumlu Tasarım', 'desc' => 'Mersin\'deki işletmenizi ziyaret eden müşterilerin %80\'i mobil cihaz kullanır. Tüm ekranlarda kusursuz çalışan responsive altyapı.'],
+                ['title' => 'WhatsApp & Teklif Formu Modülü', 'desc' => 'Ziyaretçilerin doğrudan WhatsApp üzerinden ulaşabildiği veya teklif sayfasından hızlıca başvurabildiği gelişmiş iletişim modülleri.'],
+                ['title' => '7/24 Teknik Destek', 'desc' => 'Mersin\'deki işletmeniz kesintisiz çalışsın diye yayın sonrasında da yanınızda olan hızlı teknik destek ekibi.'],
             ],
         ],
     ],
@@ -710,7 +728,7 @@ return [
         'items' => [
             [
                 'slug' => 'mugla-seo-hizmeti-googleda-ust-siralara-cikin',
-                'seo_title' => 'Muğla SEO Hizmeti: Google’da Üst Sıralara Çıkın - Hükümdar Bilişim',
+                'seo_title' => 'Muğla SEO Hizmeti: Google’da Üst Sıralara Çıkın',
                 'title' => 'Muğla SEO Hizmeti: Google’da Üst Sıralara Çıkın',
                 'category' => 'SEO Hizmeti',
                 'date' => '26 Kasım 2025',

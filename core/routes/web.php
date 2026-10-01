@@ -20,9 +20,12 @@ Route::get('/cicekci-sitesi', fn () => redirect()->route('services.show', ['slug
 Route::get('/haber-yazilimi', fn () => redirect()->route('services.show', ['slug' => 'haber-yazilimi'], 301));
 Route::get('/mugla-web-tasarim', fn () => redirect()->route('services.show', ['slug' => 'mugla-web-tasarim'], 301));
 Route::get('/e-ticaret-kampanyalari', fn () => redirect()->route('services.show', ['slug' => 'e-ticaret-kampanyalari'], 301));
+Route::get('/mersin-web-tasarim', fn () => redirect()->route('services.show', ['slug' => 'mersin-web-tasarim'], 301));
 
 Route::get('/hakkimizda', [PageController::class, 'about'])->name('about');
 Route::get('/referanslar', [PageController::class, 'references'])->name('references');
+Route::get('/referanslar/{slug}', [PageController::class, 'referenceShow'])->name('references.show');
+Route::get('/referanslarimiz/{slug}', fn (string $slug) => redirect()->route('references.show', ['slug' => $slug], 301));
 Route::get('/fiyatlar', [PageController::class, 'pricing'])->name('pricing');
 
 Route::get('/blog', [PageController::class, 'blog'])->name('blog');
